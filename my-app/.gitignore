@@ -1,0 +1,27 @@
+# OS固有ファイル
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Next.js
+.next/
+out/
+*.log
+*.gz
+
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# IDE固有のファイル
+.vscode/
+.idea/
+
+# その他
+dist/
+build/
