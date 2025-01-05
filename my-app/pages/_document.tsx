@@ -5,6 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <title>my portfolio</title>
           {/* メタ情報 */}
           <meta name="description" content="my portfolio site" />
           <meta
