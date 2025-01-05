@@ -1,17 +1,9 @@
-import Head from 'next/head';
+import useMedia from "use-media";
+import Mobile from "./mobile";
+import Desktop from "./desktop";
 
-const Home = () => {
-  return (
-    <>
-      <Head>
-        <title>my portfolio</title>
-        <meta name="description" content="This is the home page of my portfolio." />
-      </Head>
-      <div>
-        <h1>Welcome to the Home Page</h1>
-      </div>
-    </>
-  );
-};
+export default function Home() {
+  const isWide = useMedia({ minWidth: "375px" });
 
-export default Home;
+  return isWide ? <Desktop /> : <Mobile />;
+}
