@@ -6,7 +6,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {/* メタ情報 */}
-          <meta name="description" content="My Portfolio" />
+          <meta name="description" content="my portfolio site" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
