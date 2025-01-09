@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
 /* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Lilita One";
   margin: 0;
   padding: 0;
 }
