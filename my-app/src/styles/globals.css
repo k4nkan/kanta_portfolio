@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 /* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "Lilita One";
+  font-family: "Lilita One", "Mochiy Pop One";
   margin: 0;
   padding: 0;
 }
