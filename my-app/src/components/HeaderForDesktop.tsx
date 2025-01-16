@@ -16,17 +16,17 @@ const HeaderForDesktop = () => {
       </Link>
       <div className="flex gap-5 md:gap-7.5 lg:gap-10 text-lg md:text-xl lg-text-2xl">
         <Link href={"/"}>
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
             Top
           </motion.div>
         </Link>
         <Link href={"/gallery"}>
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
             Gallery
           </motion.div>
         </Link>
         <Link href={"/access"}>
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
             Access
           </motion.div>
         </Link>
