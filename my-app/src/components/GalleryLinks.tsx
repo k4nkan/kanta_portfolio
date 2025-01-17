@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { TbWorld } from "react-icons/tb";
-import { FaGithub } from "react-icons/fa";
+import { TbBrandGithub } from "react-icons/tb";
 import { MdClose } from "react-icons/md";
 
 interface GalleryLinksProps {
@@ -26,12 +26,12 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
   const [detailOpen, setDetailOpen] = useState(false);
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center px-5">
       <div
         onClick={() => setDetailOpen(true)}
-        className="cursor-pointer w-[400px] border-2 border-black rounded-xl"
+        className="cursor-pointer w-1/2 min-w-[200px] max-w-[500px] border-2 border-black rounded-xl"
       >
-        <div className="text-xl text-center pt-2">{title}</div>
+        <div className="text-sm md:text-lg lg:text-xl text-center pt-3">{title}</div>
         <img src={img} alt={altText} className="p-1"/>
       </div>
 
@@ -54,15 +54,15 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
               />
             </div>
             <img src={img} alt={altText} />
-            <div className="px-2">
+            <div className="px-3">
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
                 href={pageLink}
                 className="flex gap-2 items-center mb-2"
               >
-                <TbWorld size={25} />
-                <div className="pt-1">Page Link</div>
+                <TbWorld className="text-xl md:text-2xl lg:text-3xl" />
+                <div className="pt-1 text-md md:text-lg lg:text-xl">Page Link</div>
               </Link>
               <Link
                 target="_blank"
@@ -70,8 +70,8 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
                 href={gitLink}
                 className="flex gap-2 items-center mb-3"
               >
-                <FaGithub size={25} />
-                <div className="pt-1">Github Link</div>
+                <TbBrandGithub className="text-xl md:text-2xl lg:text-3xl" />
+                <div className="pt-1 text-md md:text-lg lg:text-xl">Github Link</div>
               </Link>
               <div className="mb-3 text-sm md:text-md lg:text-lg">
                 概要：{detail}
