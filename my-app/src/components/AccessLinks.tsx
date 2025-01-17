@@ -12,7 +12,7 @@ const AccessLinks: React.FC<AccessLinksProps> = ({ icon, url, title }) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center justify-center gap-5 p-4 bg-slate-100 text-lg md:text-xl lg:text-2xl rounded-lg w-1/4 min-w-[200px]"
+      className="flex items-center justify-center gap-4 p-3 border-2 border-black text-lg md:text-xl lg:text-2xl rounded-xl w-[200px]"
     >
       <span className="text-3xl md:text-4xl lg:text-5xl">{icon}</span>
       <span>{title}</span>
