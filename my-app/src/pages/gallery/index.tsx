@@ -8,8 +8,10 @@ const Home = () => {
         title={"就活メールつくるくん"}
         img={"/gallery_1.png"}
         altText={"project img, 就活メールつくるくん"}
-        pageLink={""}
+        pageLink={"null"}
         gitLink={"https://github.com/k4nkan/hackathon-2023-TeamC"}
+        detail={"ハッカソンで作成, 就活におけるメールを簡単に作成できます"}
+        tech={"React, Next.js, TypeScript, Docker, Open AI api, etc"}
       />
     </div>
   );
