@@ -4,7 +4,7 @@ import React from "react";
 
 const HeaderForDesktop = () => {
   return (
-    <div className="flex justify-between items-center p-5 px-5 pb-5 md:px-10 lg:px-15 border-b-4 border-black">
+    <div className="flex justify-between items-center p-5 px-5 pl-7 pb-5 md:px-10 lg:px-15 border-b-4 border-black">
       <Link href={"/"}>
         <motion.div
           whileHover={{ scale: 1.1 }}
