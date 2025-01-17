@@ -3,7 +3,7 @@ import GalleryLinks from "../../components/GalleryLinks";
 const Home = () => {
   return (
     <div>
-      <div>this is gallery</div>
+      <div className="text-center text-2xl md:text-3xl lg:text-4xl p-4">My Gallery</div>
       <GalleryLinks
         title={"就活メールつくるくん"}
         img={"/gallery_1.png"}

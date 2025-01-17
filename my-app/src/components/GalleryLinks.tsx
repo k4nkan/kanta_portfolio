@@ -26,13 +26,13 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
   const [detailOpen, setDetailOpen] = useState(false);
 
   return (
-    <div>
+    <div className="w-full flex justify-center">
       <div
         onClick={() => setDetailOpen(true)}
-        className="cursor-pointer p-3 w-[400px] bg-slate-200 hover:shadow-md transition-shadow duration-150"
+        className="cursor-pointer w-[400px] border-2 border-black rounded-xl"
       >
-        <div className="text-xl px-4">{title}</div>
-        <img src={img} alt={altText} className="rounded-md" />
+        <div className="text-xl text-center pt-2">{title}</div>
+        <img src={img} alt={altText} className="p-1"/>
       </div>
 
       {detailOpen && (
@@ -42,7 +42,7 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white p-5 rounded-lg shadow-md max-w-[700px]"
+            className="bg-white p-5 rounded-xl shadow-md max-w-[700px]"
           >
             <div className="flex items-center justify-between px-2">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-bold p-2">
