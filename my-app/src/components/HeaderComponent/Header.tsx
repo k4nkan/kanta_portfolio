@@ -14,7 +14,7 @@ const Header = () => {
     <>
       {/* mobile用の構造 */}
       <div className="md:hidden">
-        <div className="flex w-full h-[65px] justify-center items-center border-b-4 border-black">
+        <div className={`flex w-full h-[61px] justify-center items-center ${!MenuOpen ? "outline outline-4 outline-black" : ""} `}>
           <FiMenu
             onClick={handleMenuToggle}
             className="absolute left-4 text-2xl"
@@ -22,7 +22,7 @@ const Header = () => {
           <HeaderTitle />
         </div>
         {MenuOpen && (
-          <div className="flex relative w-full h-[35px] justify-center border-b-4 border-black">
+          <div className="flex relative w-full h-[39px] justify-center border-b-4 border-black">
             <div className="absolute top-[-5px]">
               <HeaderMenu />
             </div>
@@ -31,8 +31,8 @@ const Header = () => {
       </div>
 
       {/* desktop用の構造 */}
-      <div className="md:flex hidden justify-center border-b-4 border-black">
-        <div className="flex w-full h-[65px] max-w-[1200px] justify-between items-center px-10">
+      <div className="md:flex hidden justify-center outline outline-4 outline-black">
+        <div className="flex w-full h-[61px] max-w-[1200px] justify-between items-center px-10">
           <HeaderTitle />
           <HeaderMenu />
         </div>
