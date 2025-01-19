@@ -2,6 +2,7 @@ import { useState } from "react";
 import HeaderMenu from "./HeaderMenu";
 import HeaderTitle from "./HeaderTitle";
 import { FiMenu } from "react-icons/fi";
+import { MdClose } from "react-icons/md";
 
 const Header = () => {
   const [MenuOpen, setMenuOpen] = useState(false);
@@ -14,11 +15,22 @@ const Header = () => {
     <>
       {/* mobile用の構造 */}
       <div className="md:hidden">
-        <div className={`flex w-full h-[61px] justify-center items-center ${!MenuOpen ? "outline outline-4 outline-black" : ""} `}>
-          <FiMenu
-            onClick={handleMenuToggle}
-            className="absolute left-4 text-2xl"
-          />
+        <div
+          className={`flex w-full h-[61px] justify-center items-center ${
+            !MenuOpen ? "outline outline-4 outline-black" : ""
+          } `}
+        >
+          {MenuOpen ? (
+            <MdClose
+              onClick={handleMenuToggle}
+              className="absolute left-4 text-3xl"
+            />
+          ) : (
+            <FiMenu
+              onClick={handleMenuToggle}
+              className="absolute left-4 text-2xl"
+            />
+          )}
           <HeaderTitle />
         </div>
         {MenuOpen && (
