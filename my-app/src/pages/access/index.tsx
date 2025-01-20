@@ -8,10 +8,8 @@ const Home = () => {
   return (
     <div className="flex flex-col gap-4 justify-center items-center" style={{ minHeight: "calc(100vh - 100px)" }}>
       <div className="text-center text-4xl">Access Page</div>
-      <div className="text-center text-xl">
-        各種SNSへのアクセスページです。
-      </div>
-      <div className="flex flex-col gap-3 items-center w-[300px]">
+      <div className="text-center text-xl">各種SNSへのアクセスページです</div>
+      <div className="grid gap-3 items-center w-4/5 max-w-[300px] md:grid-cols-2 md:max-w-[800px]">
         <AccessLinks
           icon={<FaGithub />}
           url="https://github.com/k4nkan"
