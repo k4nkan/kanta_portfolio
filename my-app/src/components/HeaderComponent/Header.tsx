@@ -1,14 +1,33 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import HeaderMenu from "./HeaderMenu";
 import HeaderTitle from "./HeaderTitle";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 
+const IconsAnimationVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, rotate: 360 },
+  exit: { opacity: 0 },
+};
+
+const IconsAnimation = {
+  variants: IconsAnimationVariants,
+  initial: "hidden",
+  animate: "visible",
+  exit: "exit",
+  whileHover: { scale: 1.2 },
+  whileTap: { scale: 0.9 },
+  transition: { duration: 0.2 },
+};
+
 const Header = () => {
   const [MenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    setMenuOpen(!MenuOpen);
+    setTimeout(() => {
+      setMenuOpen(!MenuOpen);
+    }, 200);
   };
 
   return (
@@ -21,15 +40,25 @@ const Header = () => {
           } `}
         >
           {MenuOpen ? (
-            <MdClose
-              onClick={handleMenuToggle}
-              className="absolute left-4 text-3xl"
-            />
+            <AnimatePresence>
+              <motion.div
+                key="close-icon"
+                {...IconsAnimation}
+                className="absolute left-4 text-3xl"
+              >
+                <MdClose onClick={handleMenuToggle} />
+              </motion.div>
+            </AnimatePresence>
           ) : (
-            <FiMenu
-              onClick={handleMenuToggle}
-              className="absolute left-4 text-2xl"
-            />
+            <AnimatePresence>
+              <motion.div
+                key="open-icon"
+                {...IconsAnimation}
+                className="absolute left-4 text-3xl"
+              >
+                <FiMenu onClick={handleMenuToggle} />
+              </motion.div>
+            </AnimatePresence>
           )}
           <HeaderTitle />
         </div>
