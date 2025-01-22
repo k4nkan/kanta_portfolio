@@ -39,3 +39,8 @@ export const LinksAnimation = {
   initial: { opacity: 0.6, borderRadius: "0.75rem" },
   color: "#dc3545",
 };
+
+export const ButtonAnimation = {
+  whileHover: { scale: 1.2 },
+  whileTap: { scale: 0.9 },
+};
