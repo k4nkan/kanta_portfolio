@@ -18,29 +18,40 @@ const IconsAnimation = {
   exit: "exit",
   whileHover: { scale: 1.2 },
   whileTap: { scale: 0.9 },
-  transition: { duration: 0.2 },
+  transition: { duration: 0.1 },
+};
+
+const MenuAnimationVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20 },
+};
+
+const MenuAnimation = {
+  variants: MenuAnimationVariants,
+  initial: "hidden",
+  animate: "visible",
+  exit: "exit",
 };
 
 const Header = () => {
   const [MenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    setTimeout(() => {
-      setMenuOpen(!MenuOpen);
-    }, 200);
+    setMenuOpen(!MenuOpen);
   };
 
   return (
     <>
       {/* mobile用の構造 */}
       <div className="md:hidden">
-        <div
-          className={`flex w-full h-[61px] justify-center items-center ${
-            !MenuOpen ? "outline outline-4 outline-black" : ""
+        <motion.div
+          className={`flex relative w-full h-[65px] z-50 bg-white justify-center items-center ${
+            !MenuOpen ? "border-b-4 border-black" : "border-b-4 border-white"
           } `}
         >
-          {MenuOpen ? (
-            <AnimatePresence>
+          <AnimatePresence>
+            {MenuOpen ? (
               <motion.div
                 key="close-icon"
                 {...IconsAnimation}
@@ -48,31 +59,35 @@ const Header = () => {
               >
                 <MdClose onClick={handleMenuToggle} />
               </motion.div>
-            </AnimatePresence>
-          ) : (
-            <AnimatePresence>
+            ) : (
               <motion.div
-                key="open-icon"
                 {...IconsAnimation}
                 className="absolute left-4 text-3xl"
               >
                 <FiMenu onClick={handleMenuToggle} />
               </motion.div>
-            </AnimatePresence>
-          )}
+            )}
+          </AnimatePresence>
           <HeaderTitle />
-        </div>
-        {MenuOpen && (
-          <div className="flex relative w-full h-[39px] justify-center border-b-4 border-black">
-            <div className="absolute top-[-5px]">
-              <HeaderMenu />
-            </div>
-          </div>
-        )}
+        </motion.div>
+
+        <AnimatePresence>
+          {MenuOpen && (
+            <motion.div
+              key={"menu-open"}
+              {...MenuAnimation}
+              className="flex absolute w-full h-[39px] bg-white justify-center border-b-4 border-black"
+            >
+              <div className="top-[-5px]">
+                <HeaderMenu />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* desktop用の構造 */}
-      <div className="md:flex hidden justify-center outline outline-4 outline-black">
+      <div className="md:flex hidden justify-center border-b-4 border-black">
         <div className="flex w-full h-[61px] max-w-[1200px] justify-between items-center px-10">
           <HeaderTitle />
           <HeaderMenu />
