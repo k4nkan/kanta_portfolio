@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { TbWorld } from "react-icons/tb";
-import { TbBrandGithub } from "react-icons/tb";
 import { MdClose } from "react-icons/md";
+import AccessLinks from "./AccessLinks";
+import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { ButtonAnimation, LinksAnimation } from "./Animations/Animations";
 
 interface GalleryLinksProps {
   title: string;
@@ -31,8 +34,10 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
         onClick={() => setDetailOpen(true)}
         className="cursor-pointer w-1/2 min-w-[200px] max-w-[500px] border-2 border-black rounded-xl"
       >
-        <div className="text-sm md:text-lg lg:text-xl text-center pt-3">{title}</div>
-        <img src={img} alt={altText} className="p-1"/>
+        <div className="text-sm md:text-lg lg:text-xl text-center pt-3">
+          {title}
+        </div>
+        <img src={img} alt={altText} className="p-1" />
       </div>
 
       {detailOpen && (
@@ -45,40 +50,30 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
             className="bg-white p-5 rounded-xl shadow-md max-w-[700px]"
           >
             <div className="flex items-center justify-between px-2">
-              <h1 className="text-xl md:text-2xl lg:text-3xl font-bold p-2">
-                {title}
-              </h1>
-              <MdClose
-                onClick={() => setDetailOpen(false)}
-                className="text-2xl md:text-3xl lg:text-4xl cursor-pointer"
-              />
+              <h1 className="text-2xl font-bold p-2">{title}</h1>
+              <motion.div {...ButtonAnimation}>
+                <MdClose
+                  onClick={() => setDetailOpen(false)}
+                  className="text-2xl cursor-pointer"
+                />
+              </motion.div>
             </div>
             <img src={img} alt={altText} />
-            <div className="px-3">
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href={pageLink}
-                className="flex gap-2 items-center mb-2"
-              >
-                <TbWorld className="text-xl md:text-2xl lg:text-3xl" />
-                <div className="pt-1 text-md md:text-lg lg:text-xl">Page Link</div>
-              </Link>
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href={gitLink}
-                className="flex gap-2 items-center mb-3"
-              >
-                <TbBrandGithub className="text-xl md:text-2xl lg:text-3xl" />
-                <div className="pt-1 text-md md:text-lg lg:text-xl">Github Link</div>
-              </Link>
-              <div className="mb-3 text-sm md:text-md lg:text-lg">
-                概要：{detail}
+            <div className="flex flex-col gap-4 px-3 text-md">
+              <div className="flex justify-center gap-10 px-2">
+                <motion.span {...LinksAnimation} className="w-full">
+                  <AccessLinks
+                    icon={<FaGithub />}
+                    url={gitLink}
+                    title="Github"
+                  />
+                </motion.span>
+                <motion.span {...LinksAnimation} className="w-full">
+                  <AccessLinks icon={<TbWorld />} url={pageLink} title="Page" />
+                </motion.span>
               </div>
-              <div className="mb-3 text-sm md:text-md lg:text-lg">
-                使用技術：{tech}
-              </div>
+              <div>概要：{detail}</div>
+              <div>使用技術：{tech}</div>
             </div>
           </div>
         </div>
