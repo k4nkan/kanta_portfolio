@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 import AccessLinks from "./AccessLinks";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { ButtonAnimation, LinksAnimation } from "./Animations/Animations";
+import { BigButtonAnimation, ButtonAnimation, LinksAnimation } from "./Animations/Animations";
 
 interface GalleryLinksProps {
   title: string;
@@ -30,7 +30,7 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
 
   return (
     <div className="w-full flex justify-center px-5">
-      <div
+      <motion.div {...BigButtonAnimation}
         onClick={() => setDetailOpen(true)}
         className="cursor-pointer w-1/2 min-w-[200px] max-w-[500px] border-2 border-black rounded-xl"
       >
@@ -38,7 +38,7 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
           {title}
         </div>
         <img src={img} alt={altText} className="p-1" />
-      </div>
+      </motion.div>
 
       {detailOpen && (
         <div
