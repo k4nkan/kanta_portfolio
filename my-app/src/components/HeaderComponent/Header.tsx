@@ -25,9 +25,7 @@ const Header = () => {
   const [MenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    setTimeout(() => {
-      setMenuOpen(!MenuOpen);
-    }, 200);
+    setMenuOpen(!MenuOpen);
   };
 
   return (
@@ -35,8 +33,8 @@ const Header = () => {
       {/* mobile用の構造 */}
       <div className="md:hidden">
         <div
-          className={`flex w-full h-[61px] justify-center items-center ${
-            !MenuOpen ? "outline outline-4 outline-black" : ""
+          className={`flex relative w-full h-[65px] justify-center items-center ${
+            !MenuOpen ? "border-b-4 border-black" : "border-b-4 border-white"
           } `}
         >
           {MenuOpen ? (
@@ -63,8 +61,8 @@ const Header = () => {
           <HeaderTitle />
         </div>
         {MenuOpen && (
-          <div className="flex relative w-full h-[39px] justify-center border-b-4 border-black">
-            <div className="absolute top-[-5px]">
+          <div className="flex absolute w-full h-[39px] bg-white justify-center border-b-4 border-black">
+            <div className="top-[-5px]">
               <HeaderMenu />
             </div>
           </div>
@@ -72,7 +70,7 @@ const Header = () => {
       </div>
 
       {/* desktop用の構造 */}
-      <div className="md:flex hidden justify-center outline outline-4 outline-black">
+      <div className="md:flex hidden justify-center border-b-4 border-black">
         <div className="flex w-full h-[61px] max-w-[1200px] justify-between items-center px-10">
           <HeaderTitle />
           <HeaderMenu />
