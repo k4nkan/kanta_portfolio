@@ -4,19 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-
-const LinksAnimation = {
-  whileHover: {
-    scale: 1.05,
-    opacity: 1,
-    color: "#ffffff",
-    background: "#000000",
-    borderRadius: "0.75rem",
-  },
-  whileTap: { scale: 0.9 },
-  initial: { opacity: 0.6, borderRadius: "0.75rem" },
-  color: "#dc3545",
-};
+import { LinksAnimation } from "../../components/Animations/Animations";
 
 const Home = () => {
   return (
