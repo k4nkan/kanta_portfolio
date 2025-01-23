@@ -48,7 +48,7 @@ const Header = () => {
             <motion.div
               key={"menu-open"}
               {...MenuAnimation}
-              className="flex fixed top-[65px] w-full bg-white justify-center border-b-4 border-black"
+              className="flex fixed top-[65px] z-50 w-full bg-white justify-center border-b-4 border-black"
             >
               <div className="relative top-[-5px]">
                 <HeaderMenu />
