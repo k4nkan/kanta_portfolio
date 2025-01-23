@@ -9,7 +9,7 @@ import { LinksAnimation } from "../../components/Animations/Animations";
 const Home = () => {
   return (
     <div
-      className="flex flex-col gap-4 justify-center items-center"
+      className="flex flex-col gap-4 justify-center items-center pt-[65px]"
       style={{ minHeight: "calc(100vh - 65px)" }}
     >
       <div className="text-center text-4xl">Access Page</div>
