@@ -18,9 +18,9 @@ const Header = () => {
       {/* mobile用の構造 */}
       <div className="md:hidden">
         <motion.div
-          className={`flex relative w-full h-[65px] z-50 bg-white justify-center items-center ${
-            !MenuOpen ? "border-b-4 border-black" : "border-b-4 border-white"
-          } `}
+          className={`fixed flex w-full h-[65px] z-50 bg-white justify-center items-center border-b-4 ${
+            !MenuOpen ? "border-black" : "border-white"
+          }`}
         >
           <AnimatePresence>
             {MenuOpen ? (
@@ -48,9 +48,9 @@ const Header = () => {
             <motion.div
               key={"menu-open"}
               {...MenuAnimation}
-              className="flex absolute w-full h-[39px] bg-white justify-center border-b-4 border-black"
+              className="flex fixed top-[65px] w-full bg-white justify-center border-b-4 border-black"
             >
-              <div className="top-[-5px]">
+              <div className="relative top-[-5px]">
                 <HeaderMenu />
               </div>
             </motion.div>
@@ -59,7 +59,7 @@ const Header = () => {
       </div>
 
       {/* desktop用の構造 */}
-      <div className="md:flex hidden justify-center border-b-4 border-black">
+      <div className="md:flex w-full fixed hidden justify-center border-b-4 bg-white border-black z-50">
         <div className="flex w-full h-[61px] max-w-[1200px] justify-between items-center px-10">
           <HeaderTitle />
           <HeaderMenu />

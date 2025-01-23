@@ -1,9 +1,10 @@
-import useMedia from "use-media";
-import Mobile from "./mobile";
-import Desktop from "./desktop";
-
 export default function Home() {
-  const isWide = useMedia({ minWidth: "450px" });
-
-  return isWide ? <Desktop /> : <Mobile />;
+  return (
+    <div
+      className="flex flex-col gap-5 justify-center pt-[65px]"
+      style={{ minHeight: "calc(100vh - 65px)" }}
+    >
+      <div className="text-center text-4xl">this is my portfolio</div>
+    </div>
+  );
 }

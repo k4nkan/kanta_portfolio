@@ -3,7 +3,7 @@ import GalleryLinks from "../../components/GalleryLinks";
 const Home = () => {
   return (
     <div
-      className="flex flex-col gap-5 justify-center"
+      className="flex flex-col gap-5 justify-center pt-[65px]"
       style={{ minHeight: "calc(100vh - 65px)" }}
     >
       <div className="text-center text-2xl">My Gallery</div>
@@ -17,6 +17,39 @@ const Home = () => {
         tech={"React, Next.js, TypeScript, Docker, Open AI api, etc"}
       />
       <GalleryLinks
+        title={"MAsterpiece Challenge"}
+        img={"/gallery_1.png"}
+        altText={"project img, MAsterpiece Challenge"}
+        pageLink={"null"}
+        gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
+        detail={
+          "ハッカソンで作成, ゲーム感覚でプログラミングスキルを伸ばせます"
+        }
+        tech={"React, Next.js, TypeScript, Firebase, CodeMirror, etc"}
+      />
+            <GalleryLinks
+        title={"MAsterpiece Challenge"}
+        img={"/gallery_1.png"}
+        altText={"project img, MAsterpiece Challenge"}
+        pageLink={"null"}
+        gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
+        detail={
+          "ハッカソンで作成, ゲーム感覚でプログラミングスキルを伸ばせます"
+        }
+        tech={"React, Next.js, TypeScript, Firebase, CodeMirror, etc"}
+      />
+            <GalleryLinks
+        title={"MAsterpiece Challenge"}
+        img={"/gallery_1.png"}
+        altText={"project img, MAsterpiece Challenge"}
+        pageLink={"null"}
+        gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
+        detail={
+          "ハッカソンで作成, ゲーム感覚でプログラミングスキルを伸ばせます"
+        }
+        tech={"React, Next.js, TypeScript, Firebase, CodeMirror, etc"}
+      />
+            <GalleryLinks
         title={"MAsterpiece Challenge"}
         img={"/gallery_1.png"}
         altText={"project img, MAsterpiece Challenge"}
