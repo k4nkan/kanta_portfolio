@@ -4,7 +4,7 @@ import { ButtonAnimation } from "../Animations/Animations";
 
 const HeaderMenu = () => {
   return (
-    <div className="flex gap-[40px] text-xl">
+    <div className="flex gap-[40px] text-xl pt-1">
       <Link href={"/"}>
         <motion.div {...ButtonAnimation}>Top</motion.div>
       </Link>
