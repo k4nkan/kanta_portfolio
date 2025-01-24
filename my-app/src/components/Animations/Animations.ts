@@ -36,7 +36,7 @@ export const LinksAnimation = {
     borderRadius: "0.75rem",
   },
   whileTap: { scale: 0.9 },
-  initial: { opacity: 0.6, borderRadius: "0.75rem" },
+  initial: { opacity: 1, borderRadius: "0.75rem" },
   color: "#dc3545",
 };
 
@@ -46,6 +46,6 @@ export const ButtonAnimation = {
 };
 
 export const BigButtonAnimation = {
-    whileHover: { scale: 1.1 },
-    whileTap: { scale: 0.9 },
-  };
+  whileHover: { scale: 1.1 },
+  whileTap: { scale: 0.9 },
+};
