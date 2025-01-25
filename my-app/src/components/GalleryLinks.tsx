@@ -5,7 +5,11 @@ import { MdClose } from "react-icons/md";
 import AccessLinks from "./AccessLinks";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { BigButtonAnimation, ButtonAnimation, LinksAnimation } from "./Animations/Animations";
+import {
+  BigButtonAnimation,
+  ButtonAnimation,
+  LinksAnimation,
+} from "./Animations/Animations";
 
 interface GalleryLinksProps {
   title: string;
@@ -29,14 +33,13 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
   const [detailOpen, setDetailOpen] = useState(false);
 
   return (
-    <div className="w-full flex justify-center px-5">
-      <motion.div {...BigButtonAnimation}
+    <div className="w-full flex justify-center">
+      <motion.div
+        {...BigButtonAnimation}
         onClick={() => setDetailOpen(true)}
-        className="cursor-pointer w-1/2 min-w-[200px] max-w-[500px] border-2 border-black rounded-xl"
+        className="cursor-pointer w-full border-2 border-black"
       >
-        <div className="text-sm md:text-lg lg:text-xl text-center pt-3">
-          {title}
-        </div>
+        <div className="text-md md:text-xl text-center pt-3">{title}</div>
         <img src={img} alt={altText} className="p-1" />
       </motion.div>
 
@@ -58,7 +61,7 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
                 />
               </motion.div>
             </div>
-            <img src={img} alt={altText} />
+            <img src={img} alt={altText} className="p-3" />
             <div className="flex flex-col gap-4 px-3 text-md">
               <div className="flex justify-center gap-10 px-2">
                 <motion.span {...LinksAnimation} className="w-full">
