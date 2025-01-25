@@ -33,9 +33,27 @@ const Home = () => {
           title={"ポートフォリオサイト"}
           img={"/gallery_3.png"}
           altText={"project img, my portfolio"}
-          pageLink={"null"}
-          gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
+          pageLink={"https://kanta-portfolio.vercel.app/"}
+          gitLink={"https://github.com/k4nkan/kanta_portfolio"}
           detail={"ポートフォリオサイトです。"}
+          tech={"React, Next.js, TypeScript, FramerMotion, etc"}
+        />
+        <GalleryLinks
+          title={"color sync"}
+          img={"/gallery_4.png"}
+          altText={"project img, color sync"}
+          pageLink={"https://color-sync-front.vercel.app/"}
+          gitLink={"https://github.com/k4nkan/color-sync-front"}
+          detail={"テーマを入れたさ配色を提案してくれるサイトです。apiは別で作成し、デプロイしました。"}
+          tech={"React, Next.js, TypeScript, Gemini AI, etc"}
+        />
+        <GalleryLinks
+          title={"study clock"}
+          img={"/gallery_5.png"}
+          altText={"project img, study clock"}
+          pageLink={"https://study-clock-sand.vercel.app/"}
+          gitLink={"https://github.com/k4nkan/study-clock"}
+          detail={"勉強に集中するために、パソコンを放置すれば放置するほど画面がオシャレになるサイトです。"}
           tech={"React, Next.js, TypeScript, FramerMotion, etc"}
         />
       </div>
