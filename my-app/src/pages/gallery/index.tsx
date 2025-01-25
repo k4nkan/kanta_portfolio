@@ -11,7 +11,7 @@ const Home = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-[600px] md:max-w-[1000px] w-11/12">
         <GalleryLinks
           title={"就活メールつくるくん"}
-          img={"/gallery_1.png"}
+          img={"/gallery_images/gallery_1.png"}
           altText={"project img, 就活メールつくるくん"}
           pageLink={"null"}
           gitLink={"https://github.com/k4nkan/hackathon-2023-TeamC"}
@@ -20,7 +20,7 @@ const Home = () => {
         />
         <GalleryLinks
           title={"MAsterpiece Challenge"}
-          img={"/gallery_2.png"}
+          img={"/gallery_images/gallery_2.png"}
           altText={"project img, MAsterpiece Challenge"}
           pageLink={"null"}
           gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
@@ -31,7 +31,7 @@ const Home = () => {
         />
         <GalleryLinks
           title={"ポートフォリオサイト"}
-          img={"/gallery_3.png"}
+          img={"/gallery_images/gallery_3.png"}
           altText={"project img, my portfolio"}
           pageLink={"https://kanta-portfolio.vercel.app/"}
           gitLink={"https://github.com/k4nkan/kanta_portfolio"}
@@ -40,7 +40,7 @@ const Home = () => {
         />
         <GalleryLinks
           title={"color sync"}
-          img={"/gallery_4.png"}
+          img={"/gallery_images/gallery_4.png"}
           altText={"project img, color sync"}
           pageLink={"https://color-sync-front.vercel.app/"}
           gitLink={"https://github.com/k4nkan/color-sync-front"}
@@ -49,7 +49,7 @@ const Home = () => {
         />
         <GalleryLinks
           title={"study clock"}
-          img={"/gallery_5.png"}
+          img={"/gallery_images/gallery_5.png"}
           altText={"project img, study clock"}
           pageLink={"https://study-clock-sand.vercel.app/"}
           gitLink={"https://github.com/k4nkan/study-clock"}
