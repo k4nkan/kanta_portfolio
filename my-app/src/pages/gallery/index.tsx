@@ -11,7 +11,7 @@ const Home = () => {
       <div className="grid grid-cols-2 gap-3 max-w-[600px] md:grid-cols-3 md:max-w-[1000px] w-11/12">
         <GalleryLinks
           title={"就活メールつくるくん"}
-          img={"/gallery_2.png"}
+          img={"/gallery_1.png"}
           altText={"project img, 就活メールつくるくん"}
           pageLink={"null"}
           gitLink={"https://github.com/k4nkan/hackathon-2023-TeamC"}
@@ -30,26 +30,13 @@ const Home = () => {
           tech={"React, Next.js, TypeScript, Firebase, CodeMirror, etc"}
         />
         <GalleryLinks
-          title={"MAsterpiece Challenge"}
-          img={"/gallery_2.png"}
-          altText={"project img, MAsterpiece Challenge"}
+          title={"ポートフォリオサイト"}
+          img={"/gallery_3.png"}
+          altText={"project img, my portfolio"}
           pageLink={"null"}
           gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
-          detail={
-            "ハッカソンで作成, ゲーム感覚でプログラミングスキルを伸ばせます"
-          }
-          tech={"React, Next.js, TypeScript, Firebase, CodeMirror, etc"}
-        />
-        <GalleryLinks
-          title={"MAsterpiece Challenge"}
-          img={"/gallery_2.png"}
-          altText={"project img, MAsterpiece Challenge"}
-          pageLink={"null"}
-          gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
-          detail={
-            "ハッカソンで作成, ゲーム感覚でプログラミングスキルを伸ばせます"
-          }
-          tech={"React, Next.js, TypeScript, Firebase, CodeMirror, etc"}
+          detail={"ポートフォリオサイトです。"}
+          tech={"React, Next.js, TypeScript, FramerMotion, etc"}
         />
       </div>
     </div>
