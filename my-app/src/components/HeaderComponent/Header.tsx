@@ -27,14 +27,14 @@ const Header = () => {
               <motion.div
                 key="close-icon"
                 {...IconsAnimation}
-                className="absolute left-4 text-3xl"
+                className="absolute left-4 text-2xl"
               >
                 <MdClose onClick={handleMenuToggle} />
               </motion.div>
             ) : (
               <motion.div
                 {...IconsAnimation}
-                className="absolute left-4 text-3xl"
+                className="absolute left-4 text-2xl"
               >
                 <FiMenu onClick={handleMenuToggle} />
               </motion.div>

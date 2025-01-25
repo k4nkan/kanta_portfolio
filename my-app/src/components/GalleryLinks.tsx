@@ -46,11 +46,11 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
       {detailOpen && (
         <div
           onClick={() => setDetailOpen(false)}
-          className="fixed inset-0 bg-black bg-opacity-50 flex px-10 justify-center items-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white p-5 rounded-xl shadow-md max-w-[700px]"
+            className="bg-white p-5 rounded-xl shadow-md w-11/12 max-w-[600px] min-w-[280px]"
           >
             <div className="flex items-center justify-between px-2">
               <h1 className="text-2xl font-bold p-2">{title}</h1>
@@ -63,18 +63,20 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
             </div>
             <img src={img} alt={altText} className="p-3" />
             <div className="flex flex-col gap-4 px-3 text-md">
-              <div className="flex justify-center gap-10 px-2">
-                <motion.span {...LinksAnimation} className="w-full">
-                  <AccessLinks
-                    icon={<FaGithub />}
-                    url={gitLink}
-                    title="Github"
-                  />
-                </motion.span>
-                <motion.span {...LinksAnimation} className="w-full">
-                  <AccessLinks icon={<TbWorld />} url={pageLink} title="Page" />
-                </motion.span>
-              </div>
+              <motion.span {...LinksAnimation} className="w-full">
+                <AccessLinks
+                  icon={<FaGithub />}
+                  url={gitLink}
+                  title="Github Link"
+                />
+              </motion.span>
+              <motion.span {...LinksAnimation} className="w-full">
+                <AccessLinks
+                  icon={<TbWorld />}
+                  url={pageLink}
+                  title="Page Link"
+                />
+              </motion.span>
               <div>概要：{detail}</div>
               <div>使用技術：{tech}</div>
             </div>
