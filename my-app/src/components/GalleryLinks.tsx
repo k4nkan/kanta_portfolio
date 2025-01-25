@@ -37,10 +37,12 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
       <motion.div
         {...BigButtonAnimation}
         onClick={() => setDetailOpen(true)}
-        className="cursor-pointer w-full border-2 border-black"
+        className="flex flex-col gap-3 cursor-pointer border-2 border-black"
       >
-        <div className="text-md md:text-xl text-center pt-3">{title}</div>
-        <img src={img} alt={altText} className="p-1" />
+        <div className="text-md md:text-xl text-center">{title}</div>
+        <div className="h-full">
+          <img src={img} alt={altText} />
+        </div>
       </motion.div>
 
       {detailOpen && (
@@ -50,7 +52,7 @@ const GalleryLinks: React.FC<GalleryLinksProps> = ({
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="bg-white p-5 rounded-xl shadow-md w-11/12 max-w-[600px] min-w-[280px]"
+            className="bg-slate-50 p-5 rounded-xl shadow-md w-11/12 max-w-[600px] min-w-[280px]"
           >
             <div className="flex items-center justify-between px-2">
               <h1 className="text-2xl font-bold p-2">{title}</h1>

@@ -8,7 +8,7 @@ const Home = () => {
     >
       <div className="text-center text-4xl">My Gallery</div>
       <div className="text-center text-xl">これまでの制作物です</div>
-      <div className="grid grid-cols-2 gap-3 max-w-[600px] md:grid-cols-3 md:max-w-[1000px] w-11/12">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-[600px] md:max-w-[1000px] w-11/12">
         <GalleryLinks
           title={"就活メールつくるくん"}
           img={"/gallery_1.png"}
