@@ -27,14 +27,14 @@ const Header = () => {
               <motion.div
                 key="close-icon"
                 {...IconsAnimation}
-                className="absolute left-4 text-3xl"
+                className="absolute left-4 text-2xl"
               >
                 <MdClose onClick={handleMenuToggle} />
               </motion.div>
             ) : (
               <motion.div
                 {...IconsAnimation}
-                className="absolute left-4 text-3xl"
+                className="absolute left-4 text-2xl"
               >
                 <FiMenu onClick={handleMenuToggle} />
               </motion.div>
@@ -48,7 +48,7 @@ const Header = () => {
             <motion.div
               key={"menu-open"}
               {...MenuAnimation}
-              className="flex fixed top-[65px] w-full bg-white justify-center border-b-4 border-black"
+              className="flex fixed top-[65px] z-50 w-full bg-white justify-center border-b-4 border-black"
             >
               <div className="relative top-[-5px]">
                 <HeaderMenu />
