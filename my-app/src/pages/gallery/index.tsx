@@ -15,7 +15,7 @@ const Home = () => {
           altText={"project img, 就活メールつくるくん"}
           pageLink={"null"}
           gitLink={"https://github.com/k4nkan/hackathon-2023-TeamC"}
-          detail={"ハッカソンで作成, 就活におけるメールを簡単に作成できます"}
+          detail={"ハッカソンで作成, 就活における礼儀正しいメールを簡単に作成できます"}
           tech={"React, Next.js, TypeScript, Docker, Open AI api, etc"}
         />
         <GalleryLinks
@@ -25,7 +25,7 @@ const Home = () => {
           pageLink={"null"}
           gitLink={"https://github.com/k4nkan/Lit-Kansai-Hackathon-2024"}
           detail={
-            "ハッカソンで作成, ゲーム感覚でプログラミングスキルを伸ばせます"
+            "ハッカソンで作成, マルチゲーム感覚でプログラミングスキルを伸ばせます"
           }
           tech={"React, Next.js, TypeScript, Firebase, CodeMirror, etc"}
         />
@@ -35,7 +35,7 @@ const Home = () => {
           altText={"project img, my portfolio"}
           pageLink={"https://kanta-portfolio.vercel.app/"}
           gitLink={"https://github.com/k4nkan/kanta_portfolio"}
-          detail={"ポートフォリオサイトです。"}
+          detail={"本ポートフォリオサイトです。"}
           tech={"React, Next.js, TypeScript, FramerMotion, etc"}
         />
         <GalleryLinks
@@ -44,7 +44,7 @@ const Home = () => {
           altText={"project img, color sync"}
           pageLink={"https://color-sync-front.vercel.app/"}
           gitLink={"https://github.com/k4nkan/color-sync-front"}
-          detail={"テーマを入れたさ配色を提案してくれるサイトです。apiは別で作成し、デプロイしました。"}
+          detail={"テーマを入力すると配色を提案してくれるサイトです。apiは別で作成し、デプロイしました。"}
           tech={"React, Next.js, TypeScript, Gemini AI, etc"}
         />
         <GalleryLinks
