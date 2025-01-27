@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ImageAnimation } from "../components/Animations/Animations";
 
 const images = ["/profile_images/top.jpeg"];
 
@@ -22,13 +23,10 @@ export default function Home() {
     >
       <AnimatePresence>
         <motion.img
+          {...ImageAnimation}
           key={imageIndex}
           src={images[imageIndex]}
           alt="Portfolio"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
           style={{
             position: "absolute",
             height: "100%",
