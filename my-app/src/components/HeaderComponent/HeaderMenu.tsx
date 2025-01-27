@@ -11,8 +11,8 @@ const HeaderMenu = () => {
       <Link href={"/gallery"}>
         <motion.div {...ButtonAnimation}>Gallery</motion.div>
       </Link>
-      <Link href={"/access"}>
-        <motion.div {...ButtonAnimation}>Access</motion.div>
+      <Link href={"/links"}>
+        <motion.div {...ButtonAnimation}>Links</motion.div>
       </Link>
     </div>
   );
