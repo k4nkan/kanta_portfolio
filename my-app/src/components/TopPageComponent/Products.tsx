@@ -13,7 +13,7 @@ const Products: React.FC<ProductsProps> = ({ title, img, text }) => {
           <img src={img} alt="" />
         </div>
       </div>
-      <p className="whitespace-pre-line max-w-[400px] w-full">{text} </p>
+      <p className="whitespace-pre-line max-w-[400px] w-full font-mono">{text} </p>
     </div>
   );
 };

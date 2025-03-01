@@ -48,7 +48,7 @@ export default function Home() {
       <section id="about" className={`${section_style} bg-white`}>
         <div className={section_container}>
           <h2 className="text-4xl font-bold">About</h2>
-          <p className="text-lg md:text-xl">
+          <p className="text-lg md:text-xl font-mono">
             立命館大学 情報理工学部
             システムアーキテクトコースで学ぶ大学3年生です。
             <br />
@@ -65,45 +65,49 @@ export default function Home() {
       <section id="history" className={`${section_style} bg-gray-100`}>
         <div className={section_container}>
           <h2 className="text-4xl font-bold">History</h2>
-          <table className="w-full text-xl table-auto">
+          <table className="w-full text-xl table-auto font-mono">
             <thead>
               <tr>
-                <th className="text-left border-b px-4 py-2">Year</th>
-                <th className="text-left border-b px-4 py-2">Event</th>
+                <th className="text-left border-b py-2">Year</th>
+                <th className="text-left border-b py-2">Event</th>
               </tr>
             </thead>
             <tbody>
               <tr className="border-b">
-                <td className="px-4 py-2">2004</td>
-                <td className="px-4 py-2">ドイツ、エスリンゲンにて爆誕</td>
+                <td className="py-2">2004</td>
+                <td className="py-2">ドイツ、エスリンゲンにて爆誕</td>
               </tr>
               <tr className="border-b">
-                <td className="px-4 py-2">2005</td>
-                <td className="px-4 py-2">イギリス、ロンドンに引っ越し</td>
+                <td className="py-2">2005</td>
+                <td className="py-2">イギリス、ロンドンに引っ越し</td>
               </tr>
               <tr className="border-b">
-                <td className="px-4 py-2">2006</td>
-                <td className="px-4 py-2">フランス、パリに引っ越し</td>
+                <td className="py-2">2006</td>
+                <td className="py-2">フランス、パリに引っ越し</td>
               </tr>
               <tr className="border-b">
-                <td className="px-4 py-2">2012</td>
-                <td className="px-4 py-2">日本、奈良に引っ越し</td>
+                <td className="py-2">2012</td>
+                <td className="py-2">日本、奈良に引っ越し</td>
               </tr>
               <tr className="border-b">
-                <td className="px-4 py-2">2016</td>
-                <td className="px-4 py-2">イタリア、ミラノに引っ越し</td>
+                <td className="py-2">2016</td>
+                <td className="py-2">イタリア、ミラノに引っ越し</td>
               </tr>
               <tr className="border-b">
-                <td className="px-4 py-2">2018</td>
-                <td className="px-4 py-2">マルタ島に語学留学 </td>
+                <td className="py-2">2018</td>
+                <td className="py-2">マルタ島に語学留学 </td>
               </tr>
               <tr className="border-b">
-                <td className="px-4 py-2">2019</td>
-                <td className="px-4 py-2">日本、京都に引っ越し </td>
+                <td className="py-2">2019</td>
+                <td className="py-2">日本、京都に引っ越し </td>
               </tr>
               <tr className="border-b">
-                <td className="px-4 py-2">2022</td>
-                <td className="px-4 py-2">立命館大学に入学</td>
+                <td className="py-2">2022</td>
+                <td className="py-2">立命館大学に入学</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2">2024</td>
+                <td className="py-2">ライフイズテック株式会社にて長期インターン</td>
               </tr>
             </tbody>
           </table>
@@ -136,7 +140,7 @@ export default function Home() {
       <section id="product" className={`${section_style} bg-gray-100`}>
         <div className={section_container}>
           <h2 className="text-4xl font-bold">Product</h2>
-          <p className="mt-4 text-lg">
+          <p className="mt-4 text-lg font-mono">
             制作したプロダクトを紹介します。
             <br />
             他のプロダクトについては、ギャラリーページにあります。
@@ -166,7 +170,7 @@ export default function Home() {
       <section id="contact" className={`${section_style} bg-white`}>
         <div className={section_container}>
           <h2 className="text-4xl font-bold">Links</h2>
-          <p>
+          <p className="font-mono">
             <Link href={"/links"}>こちら</Link> のページからどうぞ！
           </p>
         </div>
@@ -174,12 +178,10 @@ export default function Home() {
 
       {/* Footer セクション */}
       <section id="Footer" className={`${section_style} bg-gray-100`}>
-        <div className={section_container}>
-          <div>
+          <div className="p-4">
             icons by &nbsp;
             <Link href={"https://icons8.com"}>Icons8</Link>
           </div>
-        </div>
       </section>
     </>
   );
