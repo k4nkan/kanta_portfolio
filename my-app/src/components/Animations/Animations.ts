@@ -52,6 +52,11 @@ export const ButtonAnimation = {
   whileTap: { scale: 0.9 },
 };
 
+export const MoreAnimation = {
+  whileHover: { scale: 1.05 },
+  whileTap: { scale: 0.95 },
+};
+
 export const BigButtonAnimation = {
   whileHover: { scale: 1.1 },
   whileTap: { scale: 0.9 },
