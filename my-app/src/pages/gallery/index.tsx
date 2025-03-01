@@ -15,7 +15,9 @@ const Home = () => {
           altText={"project img, 就活メールつくるくん"}
           pageLink={"null"}
           gitLink={"https://github.com/k4nkan/hackathon-2023-TeamC"}
-          detail={"ハッカソンで作成, 就活における礼儀正しいメールを簡単に作成できます"}
+          detail={
+            "ハッカソンで作成, 就活における礼儀正しいメールを簡単に作成できます"
+          }
           tech={"React, Next.js, TypeScript, Docker, Open AI api, etc"}
         />
         <GalleryLinks
@@ -44,7 +46,9 @@ const Home = () => {
           altText={"project img, color sync"}
           pageLink={"https://color-sync-front.vercel.app/"}
           gitLink={"https://github.com/k4nkan/color-sync-front"}
-          detail={"テーマを入力すると配色を提案してくれるサイトです。apiは別で作成し、デプロイしました。"}
+          detail={
+            "テーマを入力すると配色を提案してくれるサイトです。apiは別で作成し、デプロイしました。"
+          }
           tech={"React, Next.js, TypeScript, Gemini AI, etc"}
         />
         <GalleryLinks
@@ -53,8 +57,21 @@ const Home = () => {
           altText={"project img, study clock"}
           pageLink={"https://study-clock-sand.vercel.app/"}
           gitLink={"https://github.com/k4nkan/study-clock"}
-          detail={"勉強に集中するために、パソコンを放置すれば放置するほど画面がオシャレになるサイトです。"}
+          detail={
+            "勉強に集中するために、パソコンを放置すれば放置するほど画面がオシャレになるサイトです。"
+          }
           tech={"React, Next.js, TypeScript, FramerMotion, etc"}
+        />
+        <GalleryLinks
+          title={"DISHdeCODE"}
+          img={"/gallery_images/gallery_6.png"}
+          altText={"project img, DISHdeCODE"}
+          pageLink={"null"}
+          gitLink={"https://github.com/Shun4871/Dishcode"}
+          detail={
+            "数あるレシピサイトから、ユーザーに合うレシピを提案してくれるサイトです。"
+          }
+          tech={"hono, bun, TypeScript, Python, browser-use etc"}
         />
       </div>
     </div>
