@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useRef } from "react";
-
 type AccessLinksProps = {
   icon: React.ReactNode;
   url: string;
