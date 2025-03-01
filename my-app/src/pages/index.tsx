@@ -1,6 +1,9 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ImageAnimation } from "../components/Animations/Animations";
+import {
+  ImageAnimation,
+  MoreAnimation,
+} from "../components/Animations/Animations";
 import Skills from "../components/TopPageComponent/Skills";
 import Link from "next/link";
 import Products from "../components/TopPageComponent/Products";
@@ -9,10 +12,17 @@ export default function Home() {
   const top_image = "/profile_images/top.jpeg";
   const section_style = "flex justify-center w-full";
   const section_container =
-    "flex flex-col w-full max-w-[1200px] px-20 py-20 gap-8";
+    "flex flex-col w-full max-w-[1200px] px-20 py-20 gap-4";
 
   return (
     <>
+      <a
+        href="/#firstview"
+        className="flex items-center justify-center fixed w-16 h-16 bottom-8 right-8 z-10 rounded-full bg-white border-2 border-black"
+      >
+        TOP
+      </a>
+
       {/* First View */}
       <section
         id="firstview"
@@ -47,7 +57,7 @@ export default function Home() {
       {/* About セクション */}
       <section id="about" className={`${section_style} bg-white`}>
         <div className={section_container}>
-          <h2 className="text-4xl font-bold">About</h2>
+          <h2 className="text-4xl font-bold text-[#E08199]">About</h2>
           <p className="text-lg md:text-xl font-mono">
             立命館大学 情報理工学部
             システムアーキテクトコースで学ぶ大学3年生です。
@@ -58,13 +68,7 @@ export default function Home() {
             <br />
             フロントエンドをメインに学んできましたが、バックエンドやデザインにも興味があり、学んでいます！
           </p>
-        </div>
-      </section>
-
-      {/* History セクション */}
-      <section id="history" className={`${section_style} bg-gray-100`}>
-        <div className={section_container}>
-          <h2 className="text-4xl font-bold">History</h2>
+          <h3 className="text-2xl font-bold mt-4">My History</h3>
           <table className="w-full text-xl table-auto font-mono">
             <thead>
               <tr>
@@ -107,7 +111,9 @@ export default function Home() {
               </tr>
               <tr className="border-b">
                 <td className="py-2">2024</td>
-                <td className="py-2">ライフイズテック株式会社にて長期インターン</td>
+                <td className="py-2">
+                  ライフイズテック株式会社にて長期インターン
+                </td>
               </tr>
             </tbody>
           </table>
@@ -115,9 +121,9 @@ export default function Home() {
       </section>
 
       {/* Skills セクション */}
-      <section id="skills" className={`${section_style} bg-white`}>
+      <section id="skills" className={`${section_style} bg-gray-100`}>
         <div className={`${section_container} items-center`}>
-          <h2 className="text-4xl font-bold">Skills</h2>
+          <h2 className="text-4xl font-bold mb-4 text-[#1B706D]">Skills</h2>
           <div className="flex flex-wrap justify-center gap-8">
             <Skills img="/skills_icons/ts.png" level={70} title="TypeScript" />
             <Skills img="/skills_icons/js.png" level={50} title="JavaScript" />
@@ -137,15 +143,15 @@ export default function Home() {
       </section>
 
       {/* Product セクション */}
-      <section id="product" className={`${section_style} bg-gray-100`}>
-        <div className={section_container}>
-          <h2 className="text-4xl font-bold">Product</h2>
-          <p className="mt-4 text-lg font-mono">
+      <section id="product" className={`${section_style} bg-white`}>
+        <div className={`${section_container} max-lg:max-w-[600px] mx-auto`}>
+          <h2 className="text-4xl font-bold text-[#F8B133]">Product</h2>
+          <p className="text-lg font-mono">
             制作したプロダクトを紹介します。
             <br />
             他のプロダクトについては、ギャラリーページにあります。
           </p>
-          <div className="flex max-lg:flex-col max-lg:items-center gap-8">
+          <div className="flex max-lg:flex-col max-lg:items-center gap-6">
             <Products
               title="DISHdeCODE"
               img="/gallery_images/gallery_6.jpeg"
@@ -157,31 +163,28 @@ export default function Home() {
               text={`長期インターン先のハッカソンで作成、優秀賞を受賞しました！\nテックリード的なポジションで、フロントエンドもバックエンドもやりました！`}
             />
           </div>
-          <a
+          <motion.a
+            {...MoreAnimation}
             href={"/gallery"}
-            className="flex items-center justify-center p-3 border-2 border-black text-lg rounded-xl w-full max-lg:max-w-[600px] mx-auto"
+            className="flex items-center justify-center p-3 border-2 border-black text-2xl rounded-xl"
           >
             more
-          </a>
-        </div>
-      </section>
-
-      {/* Contact セクション */}
-      <section id="contact" className={`${section_style} bg-white`}>
-        <div className={section_container}>
-          <h2 className="text-4xl font-bold">Links</h2>
-          <p className="font-mono">
-            <Link href={"/links"}>こちら</Link> のページからどうぞ！
-          </p>
+          </motion.a>
         </div>
       </section>
 
       {/* Footer セクション */}
       <section id="Footer" className={`${section_style} bg-gray-100`}>
-          <div className="p-4">
+        <div className="flex flex-col gap-2 p-4 items-center justify-center">
+          <div>
+          created by
+            <a className="text-[#ED335A]" href="/links"> Kanta Yamauchi</a>
+          </div>
+          <div>
             icons by &nbsp;
             <Link href={"https://icons8.com"}>Icons8</Link>
           </div>
+        </div>
       </section>
     </>
   );
