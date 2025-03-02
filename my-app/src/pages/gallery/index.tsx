@@ -6,7 +6,7 @@ const Home = () => {
       className="flex flex-col gap-4 items-center justify-center pt-[65px]"
       style={{ minHeight: "calc(100vh - 65px)" }}
     >
-      <div className="text-center text-4xl">My Gallery</div>
+      <div className="text-center text-4xl pt-4">My Gallery</div>
       <div className="text-center text-xl">これまでの制作物です</div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-5 max-w-[600px] md:max-w-[1000px] w-11/12">
         <GalleryLinks
@@ -64,12 +64,12 @@ const Home = () => {
         />
         <GalleryLinks
           title={"DISHdeCODE"}
-          img={"/gallery_images/gallery_6.png"}
+          img="/gallery_images/gallery_6.jpeg"
           altText={"project img, DISHdeCODE"}
           pageLink={"null"}
           gitLink={"https://github.com/Shun4871/Dishcode"}
           detail={
-            "数あるレシピサイトから、ユーザーに合うレシピを提案してくれるサイトです。"
+            "数あるレシピサイトから、ユーザーに合うレシピを提案してくれるサイトです。（技育祭に向けて開発中）"
           }
           tech={"hono, bun, TypeScript, Python, browser-use etc"}
         />

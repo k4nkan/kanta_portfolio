@@ -4,7 +4,7 @@ import { ButtonAnimation } from "../Animations/Animations";
 
 const HeaderMenu = () => {
   return (
-    <div className="flex gap-[40px] text-xl pt-1">
+    <div className="flex gap-[40px] text-xl max-sm:text-sm pt-1">
       <Link href={"/#about"}>
         <motion.div {...ButtonAnimation}>About</motion.div>
       </Link>

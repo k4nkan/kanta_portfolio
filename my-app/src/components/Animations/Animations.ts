@@ -27,6 +27,19 @@ export const MenuAnimation = {
   exit: "exit",
 };
 
+const PopupAnimationVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
+export const PopupAnimation = {
+  variants: PopupAnimationVariants,
+  initial: "hidden",
+  animate: "visible",
+  exit: "exit",
+};
+
 export const LinksAnimation = {
   whileHover: {
     scale: 1.05,
@@ -37,6 +50,18 @@ export const LinksAnimation = {
   },
   whileTap: { scale: 0.9 },
   initial: { opacity: 1, borderRadius: "0.75rem" },
+  color: "#dc3545",
+};
+
+export const TopButtonAnimation = {
+  whileHover: {
+    scale: 1.05,
+    opacity: 1,
+    color: "#ffffff",
+    background: "#000000",
+  },
+  whileTap: { scale: 0.9 },
+  initial: { opacity: 1 },
   color: "#dc3545",
 };
 
