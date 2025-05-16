@@ -31,7 +31,7 @@ const Skills: React.FC<SkillsProps> = ({ img, level, title, detail }) => {
       setProgress((prev) => {
         if (prev < level) {
           animationFrame = requestAnimationFrame(animateProgress);
-          return prev + 2;
+          return prev + 1;
         }
         return level;
       });
