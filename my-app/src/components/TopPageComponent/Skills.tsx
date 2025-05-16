@@ -8,6 +8,7 @@ import {
 } from "../Animations/Animations";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdClose } from "react-icons/md";
+import { useInView } from "react-intersection-observer";
 
 type SkillsProps = {
   img: string;
@@ -20,7 +21,11 @@ const Skills: React.FC<SkillsProps> = ({ img, level, title, detail }) => {
   const [detailOpen, setDetailOpen] = useState(false);
   const [progress, setProgress] = useState(0);
 
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   useEffect(() => {
+    if (!inView) return;
+
     let animationFrame: number;
     const animateProgress = () => {
       setProgress((prev) => {
@@ -31,13 +36,16 @@ const Skills: React.FC<SkillsProps> = ({ img, level, title, detail }) => {
         return level;
       });
     };
+
     animateProgress();
+
     return () => cancelAnimationFrame(animationFrame);
-  }, [level]);
+  }, [inView, level]);
 
   return (
     <>
       <motion.div
+        ref={ref}
         {...BigButtonAnimation}
         onClick={() => setDetailOpen(true)}
         className="flex flex-col rounded-2xl w-40 h-48 gap-4 items-center justify-center bg-slate-200 max-sm:w-28 max-sm:h-36 max-sm:gap-2"
